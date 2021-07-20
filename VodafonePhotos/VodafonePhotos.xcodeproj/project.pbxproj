@@ -99,13 +99,11 @@
 		10B806A826A789FB00B556B0 /* VodafonePhotos */ = {
 			isa = PBXGroup;
 			children = (
-				10B806A926A789FB00B556B0 /* AppDelegate.swift */,
-				10B806AB26A789FB00B556B0 /* SceneDelegate.swift */,
-				10B806AD26A789FB00B556B0 /* ViewController.swift */,
-				10B806AF26A789FB00B556B0 /* Main.storyboard */,
-				10B806B226A789FE00B556B0 /* Assets.xcassets */,
-				10B806B426A789FE00B556B0 /* LaunchScreen.storyboard */,
-				10B806B726A789FE00B556B0 /* Info.plist */,
+				10B806DC26A78E4600B556B0 /* Delegates */,
+				10B806DD26A78E5D00B556B0 /* Storyboards */,
+				10B806DE26A78E7A00B556B0 /* Global */,
+				10B806DB26A78E3100B556B0 /* Supporting Files */,
+				10B806D926A78E1200B556B0 /* Resources */,
 			);
 			path = VodafonePhotos;
 			sourceTree = "<group>";
@@ -126,6 +124,56 @@
 				10B806CD26A789FE00B556B0 /* Info.plist */,
 			);
 			path = VodafonePhotosUITests;
+			sourceTree = "<group>";
+		};
+		10B806D926A78E1200B556B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10B806B226A789FE00B556B0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10B806DA26A78E2700B556B0 /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				10B806B726A789FE00B556B0 /* Info.plist */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		10B806DB26A78E3100B556B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10B806DA26A78E2700B556B0 /* Production */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10B806DC26A78E4600B556B0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				10B806A926A789FB00B556B0 /* AppDelegate.swift */,
+				10B806AB26A789FB00B556B0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		10B806DD26A78E5D00B556B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				10B806AF26A789FB00B556B0 /* Main.storyboard */,
+				10B806B426A789FE00B556B0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		10B806DE26A78E7A00B556B0 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				10B806AD26A789FB00B556B0 /* ViewController.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6675BR2529;
-				INFOPLIST_FILE = VodafonePhotos/Info.plist;
+				INFOPLIST_FILE = "VodafonePhotos/Supporting Files/Production/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6675BR2529;
-				INFOPLIST_FILE = VodafonePhotos/Info.plist;
+				INFOPLIST_FILE = "VodafonePhotos/Supporting Files/Production/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
