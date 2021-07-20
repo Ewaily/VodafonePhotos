@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10B806AA26A789FB00B556B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806A926A789FB00B556B0 /* AppDelegate.swift */; };
+		10B806AC26A789FB00B556B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806AB26A789FB00B556B0 /* SceneDelegate.swift */; };
+		10B806AE26A789FB00B556B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806AD26A789FB00B556B0 /* ViewController.swift */; };
+		10B806B126A789FB00B556B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B806AF26A789FB00B556B0 /* Main.storyboard */; };
+		10B806B326A789FE00B556B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B806B226A789FE00B556B0 /* Assets.xcassets */; };
+		10B806B626A789FE00B556B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B806B426A789FE00B556B0 /* LaunchScreen.storyboard */; };
+		10B806C126A789FE00B556B0 /* VodafonePhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806C026A789FE00B556B0 /* VodafonePhotosTests.swift */; };
+		10B806CC26A789FE00B556B0 /* VodafonePhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806CB26A789FE00B556B0 /* VodafonePhotosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10B806BD26A789FE00B556B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10B8069E26A789FA00B556B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10B806A526A789FB00B556B0;
+			remoteInfo = VodafonePhotos;
+		};
+		10B806C826A789FE00B556B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10B8069E26A789FA00B556B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10B806A526A789FB00B556B0;
+			remoteInfo = VodafonePhotos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10B806A626A789FB00B556B0 /* VodafonePhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodafonePhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B806A926A789FB00B556B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10B806AB26A789FB00B556B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10B806AD26A789FB00B556B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10B806B026A789FB00B556B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10B806B226A789FE00B556B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10B806B526A789FE00B556B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10B806B726A789FE00B556B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B806BC26A789FE00B556B0 /* VodafonePhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodafonePhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B806C026A789FE00B556B0 /* VodafonePhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodafonePhotosTests.swift; sourceTree = "<group>"; };
+		10B806C226A789FE00B556B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B806C726A789FE00B556B0 /* VodafonePhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodafonePhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B806CB26A789FE00B556B0 /* VodafonePhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodafonePhotosUITests.swift; sourceTree = "<group>"; };
+		10B806CD26A789FE00B556B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10B806A326A789FB00B556B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B806B926A789FE00B556B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B806C426A789FE00B556B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10B8069D26A789FA00B556B0 = {
+			isa = PBXGroup;
+			children = (
+				10B806A826A789FB00B556B0 /* VodafonePhotos */,
+				10B806BF26A789FE00B556B0 /* VodafonePhotosTests */,
+				10B806CA26A789FE00B556B0 /* VodafonePhotosUITests */,
+				10B806A726A789FB00B556B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10B806A726A789FB00B556B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10B806A626A789FB00B556B0 /* VodafonePhotos.app */,
+				10B806BC26A789FE00B556B0 /* VodafonePhotosTests.xctest */,
+				10B806C726A789FE00B556B0 /* VodafonePhotosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10B806A826A789FB00B556B0 /* VodafonePhotos */ = {
+			isa = PBXGroup;
+			children = (
+				10B806A926A789FB00B556B0 /* AppDelegate.swift */,
+				10B806AB26A789FB00B556B0 /* SceneDelegate.swift */,
+				10B806AD26A789FB00B556B0 /* ViewController.swift */,
+				10B806AF26A789FB00B556B0 /* Main.storyboard */,
+				10B806B226A789FE00B556B0 /* Assets.xcassets */,
+				10B806B426A789FE00B556B0 /* LaunchScreen.storyboard */,
+				10B806B726A789FE00B556B0 /* Info.plist */,
+			);
+			path = VodafonePhotos;
+			sourceTree = "<group>";
+		};
+		10B806BF26A789FE00B556B0 /* VodafonePhotosTests */ = {
+			isa = PBXGroup;
+			children = (
+				10B806C026A789FE00B556B0 /* VodafonePhotosTests.swift */,
+				10B806C226A789FE00B556B0 /* Info.plist */,
+			);
+			path = VodafonePhotosTests;
+			sourceTree = "<group>";
+		};
+		10B806CA26A789FE00B556B0 /* VodafonePhotosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10B806CB26A789FE00B556B0 /* VodafonePhotosUITests.swift */,
+				10B806CD26A789FE00B556B0 /* Info.plist */,
+			);
+			path = VodafonePhotosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10B806A526A789FB00B556B0 /* VodafonePhotos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B806D026A789FE00B556B0 /* Build configuration list for PBXNativeTarget "VodafonePhotos" */;
+			buildPhases = (
+				10B806A226A789FB00B556B0 /* Sources */,
+				10B806A326A789FB00B556B0 /* Frameworks */,
+				10B806A426A789FB00B556B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VodafonePhotos;
+			productName = VodafonePhotos;
+			productReference = 10B806A626A789FB00B556B0 /* VodafonePhotos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10B806BB26A789FE00B556B0 /* VodafonePhotosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B806D326A789FE00B556B0 /* Build configuration list for PBXNativeTarget "VodafonePhotosTests" */;
+			buildPhases = (
+				10B806B826A789FE00B556B0 /* Sources */,
+				10B806B926A789FE00B556B0 /* Frameworks */,
+				10B806BA26A789FE00B556B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10B806BE26A789FE00B556B0 /* PBXTargetDependency */,
+			);
+			name = VodafonePhotosTests;
+			productName = VodafonePhotosTests;
+			productReference = 10B806BC26A789FE00B556B0 /* VodafonePhotosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		10B806C626A789FE00B556B0 /* VodafonePhotosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B806D626A789FE00B556B0 /* Build configuration list for PBXNativeTarget "VodafonePhotosUITests" */;
+			buildPhases = (
+				10B806C326A789FE00B556B0 /* Sources */,
+				10B806C426A789FE00B556B0 /* Frameworks */,
+				10B806C526A789FE00B556B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10B806C926A789FE00B556B0 /* PBXTargetDependency */,
+			);
+			name = VodafonePhotosUITests;
+			productName = VodafonePhotosUITests;
+			productReference = 10B806C726A789FE00B556B0 /* VodafonePhotosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10B8069E26A789FA00B556B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					10B806A526A789FB00B556B0 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					10B806BB26A789FE00B556B0 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 10B806A526A789FB00B556B0;
+					};
+					10B806C626A789FE00B556B0 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 10B806A526A789FB00B556B0;
+					};
+				};
+			};
+			buildConfigurationList = 10B806A126A789FA00B556B0 /* Build configuration list for PBXProject "VodafonePhotos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10B8069D26A789FA00B556B0;
+			productRefGroup = 10B806A726A789FB00B556B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10B806A526A789FB00B556B0 /* VodafonePhotos */,
+				10B806BB26A789FE00B556B0 /* VodafonePhotosTests */,
+				10B806C626A789FE00B556B0 /* VodafonePhotosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10B806A426A789FB00B556B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B806B626A789FE00B556B0 /* LaunchScreen.storyboard in Resources */,
+				10B806B326A789FE00B556B0 /* Assets.xcassets in Resources */,
+				10B806B126A789FB00B556B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B806BA26A789FE00B556B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B806C526A789FE00B556B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10B806A226A789FB00B556B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B806AE26A789FB00B556B0 /* ViewController.swift in Sources */,
+				10B806AA26A789FB00B556B0 /* AppDelegate.swift in Sources */,
+				10B806AC26A789FB00B556B0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B806B826A789FE00B556B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B806C126A789FE00B556B0 /* VodafonePhotosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10B806C326A789FE00B556B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B806CC26A789FE00B556B0 /* VodafonePhotosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10B806BE26A789FE00B556B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10B806A526A789FB00B556B0 /* VodafonePhotos */;
+			targetProxy = 10B806BD26A789FE00B556B0 /* PBXContainerItemProxy */;
+		};
+		10B806C926A789FE00B556B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10B806A526A789FB00B556B0 /* VodafonePhotos */;
+			targetProxy = 10B806C826A789FE00B556B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10B806AF26A789FB00B556B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10B806B026A789FB00B556B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10B806B426A789FE00B556B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10B806B526A789FE00B556B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10B806CE26A789FE00B556B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10B806CF26A789FE00B556B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10B806D126A789FE00B556B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675BR2529;
+				INFOPLIST_FILE = VodafonePhotos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10B806D226A789FE00B556B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675BR2529;
+				INFOPLIST_FILE = VodafonePhotos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		10B806D426A789FE00B556B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675BR2529;
+				INFOPLIST_FILE = VodafonePhotosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodafonePhotos.app/VodafonePhotos";
+			};
+			name = Debug;
+		};
+		10B806D526A789FE00B556B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675BR2529;
+				INFOPLIST_FILE = VodafonePhotosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodafonePhotos.app/VodafonePhotos";
+			};
+			name = Release;
+		};
+		10B806D726A789FE00B556B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675BR2529;
+				INFOPLIST_FILE = VodafonePhotosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VodafonePhotos;
+			};
+			name = Debug;
+		};
+		10B806D826A789FE00B556B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675BR2529;
+				INFOPLIST_FILE = VodafonePhotosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VodafonePhotos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10B806A126A789FA00B556B0 /* Build configuration list for PBXProject "VodafonePhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B806CE26A789FE00B556B0 /* Debug */,
+				10B806CF26A789FE00B556B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B806D026A789FE00B556B0 /* Build configuration list for PBXNativeTarget "VodafonePhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B806D126A789FE00B556B0 /* Debug */,
+				10B806D226A789FE00B556B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B806D326A789FE00B556B0 /* Build configuration list for PBXNativeTarget "VodafonePhotosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B806D426A789FE00B556B0 /* Debug */,
+				10B806D526A789FE00B556B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B806D626A789FE00B556B0 /* Build configuration list for PBXNativeTarget "VodafonePhotosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B806D726A789FE00B556B0 /* Debug */,
+				10B806D826A789FE00B556B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10B8069E26A789FA00B556B0 /* Project object */;
+}
