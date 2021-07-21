@@ -29,7 +29,7 @@ class PhotosListView: BaseViewController {
     
     private func setupPhotosTableView() {
         let photoCell = UINib(nibName: PhotoCell.ID, bundle: nil)
-//        let adPhotoCell = UINib(nibName: RecipeCell.ID, bundle: nil)
+        let adPlaceholderCell = UINib(nibName: AdPlaceholderCell.ID, bundle: nil)
         
         photosTableView.delegate = self
         photosTableView.dataSource = self
@@ -37,7 +37,7 @@ class PhotosListView: BaseViewController {
         photosTableView.rowHeight = UITableView.automaticDimension
         photosTableView.separatorStyle = .none
         photosTableView.register(photoCell, forCellReuseIdentifier: PhotoCell.ID)
-//        photosTableView.register(recipeCell, forCellReuseIdentifier: RecipeCell.ID)
+        photosTableView.register(adPlaceholderCell, forCellReuseIdentifier: AdPlaceholderCell.ID)
     }
     
     private func fetchPhotos() {
@@ -53,6 +53,13 @@ class PhotosListView: BaseViewController {
         }
         let info = viewModel.getPhotoInfo(at: indexPath.row)
         cell.bindCell(info: info)
+        return cell
+    }
+    
+    private func instantiateAdPlaceholderCell(_ tableView: UITableView) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AdPlaceholderCell.ID) as? AdPlaceholderCell else {
+            return UITableViewCell()
+        }
         return cell
     }
 }
@@ -77,7 +84,12 @@ extension PhotosListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return instantiatePhotoCell(tableView, indexPath)
+        if viewModel.checkIfAdCellType(at: indexPath.row) {
+            return instantiateAdPlaceholderCell(tableView)
+        }
+        else {
+            return instantiatePhotoCell(tableView, indexPath)
+        }
     }
 }
 

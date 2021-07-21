@@ -14,4 +14,5 @@ struct Photo {
     let height          : Double
     let URL             : URL?
     let downloadURL     : URL?
+    let isAdPlaceholder : Bool
 }

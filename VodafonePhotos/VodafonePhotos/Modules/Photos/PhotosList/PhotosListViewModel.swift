@@ -37,4 +37,9 @@ class PhotosListViewModel {
         let photo = photos[index]
         return PhotoCellInfo(photoImageURL: photo.downloadURL)
     }
+    
+    func checkIfAdCellType(at index: Int) -> Bool {
+        let photo = photos[index]
+        return photo.isAdPlaceholder
+    }
 }
