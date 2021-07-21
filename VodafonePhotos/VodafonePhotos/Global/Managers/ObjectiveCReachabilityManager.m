@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ObjectiveCReachabilityManager.h"
+#import "VodafonePhotos-Swift.h"
 
 @implementation ObjectiveCReachabilityManager
 

@@ -172,7 +172,7 @@ extension PhotosListView: UITableViewDataSource {
     }
     
     private func isProgressRow(for indexPath: IndexPath) -> Bool {
-        guard self.viewModel.canFetchPhotos, ReachabilityManager.isReachable() else { return false }
+        guard self.viewModel.canFetchPhotos, ObjectiveCReachabilityManager.isReachable() else { return false }
         return indexPath.row == viewModel.countPhotos() - 1
     }
 }

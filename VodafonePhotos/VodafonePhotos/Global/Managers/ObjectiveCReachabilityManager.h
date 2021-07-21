@@ -9,7 +9,7 @@
 #define ObjectiveCReachabilityManager_h
 
 #import <Foundation/Foundation.h>
-#import "VodafonePhotos-Swift.h"
+
 
 @interface ObjectiveCReachabilityManager : NSObject
 

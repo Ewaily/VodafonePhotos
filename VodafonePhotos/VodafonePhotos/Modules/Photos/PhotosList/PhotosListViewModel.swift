@@ -20,7 +20,7 @@ class PhotosListViewModel {
     }
     
     func fetchPhotos(completion: @escaping () -> Void) {
-        if ReachabilityManager.isReachable() {
+        if ObjectiveCReachabilityManager.isReachable() {
             canFetchPhotos = false
             pageNumber = Constants.FIRST_PAGE_NUMBER
             useCase.fetchPhotos(page: pageNumber, limit: pageLimit) { [weak self] result in
@@ -66,7 +66,7 @@ class PhotosListViewModel {
     }
     
     func fetchMorePhotos(completion: @escaping () -> Void) {
-        guard canFetchPhotos, ReachabilityManager.isReachable() else { return }
+        guard canFetchPhotos, ObjectiveCReachabilityManager.isReachable() else { return }
         canFetchPhotos = false
         pageNumber += 1
         useCase.fetchPhotos(page: pageNumber, limit: pageLimit) { [weak self] result in
@@ -90,16 +90,19 @@ class PhotosListViewModel {
     }
     
     func getPhotoInfo(at index: Int) -> PhotoCellInfo {
+        guard !photos.isEmpty else { return .init(photoImageURL: nil) }
         let photo = photos[index]
         return PhotoCellInfo(photoImageURL: photo.downloadURL)
     }
     
     func checkIfAdCellType(at index: Int) -> Bool {
+        guard !photos.isEmpty else { return false }
         let photo = photos[index]
         return photo.isAdPlaceholder
     }
     
     func getPhotoDetailsViewInfo(at index: Int) -> PhotoDetailsViewInfo {
+        guard !photos.isEmpty else { return .init(authorName: "", photoImageURL: nil) }
         let photo = photos[index]
         return PhotoDetailsViewInfo(authorName: photo.author, photoImageURL: photo.downloadURL)
     }
@@ -109,7 +112,7 @@ class PhotosListViewModel {
     }
     
     func refreshPhotos(completion: @escaping () -> Void) {
-        if ReachabilityManager.isReachable() {
+        if ObjectiveCReachabilityManager.isReachable() {
             photos.removeAll()
             canFetchPhotos = false
             fetchPhotos(completion: completion)
@@ -124,6 +127,7 @@ class PhotosListViewModel {
     }
     
     func checkIfOfflineCellType(at index: Int) -> Bool {
+        guard !photos.isEmpty else { return false }
         let photo = photos[index]
         return photo.isOfflineCell
     }
