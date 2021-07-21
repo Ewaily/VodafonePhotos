@@ -7,9 +7,9 @@
 
 import Alamofire
 
-struct ReachabilityManager {
+@objc class ReachabilityManager: NSObject {
     
-    static func isReachable() -> Bool {
+    @objc static func isReachable() -> Bool {
         let status = NetworkReachabilityManager()?.isReachable ?? false
         return status
     }

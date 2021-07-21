@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10B7CEE626A8CFEC002B2AB7 /* ObjectiveCReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B7CEE526A8CFEC002B2AB7 /* ObjectiveCReachabilityManager.m */; };
 		10B806AA26A789FB00B556B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806A926A789FB00B556B0 /* AppDelegate.swift */; };
 		10B806AC26A789FB00B556B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806AB26A789FB00B556B0 /* SceneDelegate.swift */; };
 		10B806B126A789FB00B556B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B806AF26A789FB00B556B0 /* Main.storyboard */; };
@@ -74,6 +75,9 @@
 
 /* Begin PBXFileReference section */
 		02E93EB0C08AFEB8A1E06AA4 /* Pods-VodafonePhotosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodafonePhotosTests.release.xcconfig"; path = "Target Support Files/Pods-VodafonePhotosTests/Pods-VodafonePhotosTests.release.xcconfig"; sourceTree = "<group>"; };
+		10B7CEE426A8CFEC002B2AB7 /* VodafonePhotos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VodafonePhotos-Bridging-Header.h"; sourceTree = "<group>"; };
+		10B7CEE526A8CFEC002B2AB7 /* ObjectiveCReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCReachabilityManager.m; sourceTree = "<group>"; };
+		10B7CEE726A8D06E002B2AB7 /* ObjectiveCReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCReachabilityManager.h; sourceTree = "<group>"; };
 		10B806A626A789FB00B556B0 /* VodafonePhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodafonePhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B806A926A789FB00B556B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10B806AB26A789FB00B556B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -344,6 +348,9 @@
 			children = (
 				10B806F626A799F500B556B0 /* ReachabilityManager.swift */,
 				10B806F826A79A0600B556B0 /* NavigationManager.swift */,
+				10B7CEE526A8CFEC002B2AB7 /* ObjectiveCReachabilityManager.m */,
+				10B7CEE726A8D06E002B2AB7 /* ObjectiveCReachabilityManager.h */,
+				10B7CEE426A8CFEC002B2AB7 /* VodafonePhotos-Bridging-Header.h */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -563,6 +570,7 @@
 				TargetAttributes = {
 					10B806A526A789FB00B556B0 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					10B806BB26A789FE00B556B0 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -753,6 +761,7 @@
 				10B8073B26A894C400B556B0 /* OfflineCell.swift in Sources */,
 				10B806FE26A79A6800B556B0 /* UIView+Inspectable.swift in Sources */,
 				10B806F326A7971900B556B0 /* Photo.swift in Sources */,
+				10B7CEE626A8CFEC002B2AB7 /* ObjectiveCReachabilityManager.m in Sources */,
 				10B806EF26A7947000B556B0 /* PhotosListingResponseDTO.swift in Sources */,
 				10B806E326A791A300B556B0 /* BaseAPI.swift in Sources */,
 				10B8072A26A7E6E200B556B0 /* PhotoDetailsView.swift in Sources */,
@@ -944,6 +953,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6675BR2529;
 				INFOPLIST_FILE = "VodafonePhotos/Supporting Files/Production/Info.plist";
@@ -953,6 +963,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VodafonePhotos/Global/Managers/VodafonePhotos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -964,6 +976,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6675BR2529;
 				INFOPLIST_FILE = "VodafonePhotos/Supporting Files/Production/Info.plist";
@@ -973,6 +986,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VodafonePhotos/Global/Managers/VodafonePhotos-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
