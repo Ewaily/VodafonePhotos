@@ -15,4 +15,7 @@ struct PhotosListUseCase {
         repository.fetchPhotos(page: page, limit: limit, completion: completion)
     }
     
+    func fetchCachedPhotos(completion: @escaping (Result<[Photo], String>) -> Void) {
+        repository.fetchCachedPhotos(completion: completion)
+    }
 }

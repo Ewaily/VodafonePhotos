@@ -44,6 +44,9 @@
 		10B8072A26A7E6E200B556B0 /* PhotoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8072926A7E6E200B556B0 /* PhotoDetailsView.swift */; };
 		10B8072C26A7E9BC00B556B0 /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8072B26A7E9BC00B556B0 /* PhotoDetailsViewModel.swift */; };
 		10B8073026A7FB3700B556B0 /* UIImage+AverageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8072F26A7FB3700B556B0 /* UIImage+AverageColor.swift */; };
+		10B8073226A80A4B00B556B0 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073126A80A4B00B556B0 /* UIImage+Data.swift */; };
+		10B8073426A80E4400B556B0 /* Data+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073326A80E4400B556B0 /* Data+Image.swift */; };
+		10B8073726A813C100B556B0 /* CachedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073626A813C100B556B0 /* CachedPhotos.swift */; };
 		3C07C888947855C8F5D1E0BB /* Pods_VodafonePhotos_VodafonePhotosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */; };
 		BD080B563D054A5752DF73DA /* Pods_VodafonePhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */; };
 		F45B33511C0AD9BE8A692AD2 /* Pods_VodafonePhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16C0D54BD7D107E91BC2115 /* Pods_VodafonePhotosTests.framework */; };
@@ -111,6 +114,9 @@
 		10B8072926A7E6E200B556B0 /* PhotoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsView.swift; sourceTree = "<group>"; };
 		10B8072B26A7E9BC00B556B0 /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
 		10B8072F26A7FB3700B556B0 /* UIImage+AverageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AverageColor.swift"; sourceTree = "<group>"; };
+		10B8073126A80A4B00B556B0 /* UIImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Data.swift"; sourceTree = "<group>"; };
+		10B8073326A80E4400B556B0 /* Data+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Image.swift"; sourceTree = "<group>"; };
+		10B8073626A813C100B556B0 /* CachedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedPhotos.swift; sourceTree = "<group>"; };
 		1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2367E7CCAD946FD604FBFDA2 /* Pods-VodafonePhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodafonePhotos.release.xcconfig"; path = "Target Support Files/Pods-VodafonePhotos/Pods-VodafonePhotos.release.xcconfig"; sourceTree = "<group>"; };
 		32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos_VodafonePhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +271,7 @@
 			children = (
 				10B8070F26A7A14800B556B0 /* Repositories */,
 				10B806E026A7907A00B556B0 /* Network */,
+				10B8073526A813A700B556B0 /* PersistantStorage */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -339,6 +346,8 @@
 				10B806FD26A79A6800B556B0 /* UIView+Inspectable.swift */,
 				10B8072126A7C94400B556B0 /* Array+Add.swift */,
 				10B8072F26A7FB3700B556B0 /* UIImage+AverageColor.swift */,
+				10B8073126A80A4B00B556B0 /* UIImage+Data.swift */,
+				10B8073326A80E4400B556B0 /* Data+Image.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +439,14 @@
 				10B8072B26A7E9BC00B556B0 /* PhotoDetailsViewModel.swift */,
 			);
 			path = PhotoDetails;
+			sourceTree = "<group>";
+		};
+		10B8073526A813A700B556B0 /* PersistantStorage */ = {
+			isa = PBXGroup;
+			children = (
+				10B8073626A813C100B556B0 /* CachedPhotos.swift */,
+			);
+			path = PersistantStorage;
 			sourceTree = "<group>";
 		};
 		4737C952A731BADFCECF775F /* Pods */ = {
@@ -709,6 +726,7 @@
 				10B8070526A79B2400B556B0 /* Result.swift in Sources */,
 				10B8070726A79B3400B556B0 /* BaseViewController.swift in Sources */,
 				10B8072626A7E0B200B556B0 /* ProgressCell.swift in Sources */,
+				10B8073726A813C100B556B0 /* CachedPhotos.swift in Sources */,
 				10B8070326A79AE500B556B0 /* Constants.swift in Sources */,
 				10B806F926A79A0600B556B0 /* NavigationManager.swift in Sources */,
 				10B806FE26A79A6800B556B0 /* UIView+Inspectable.swift in Sources */,
@@ -718,12 +736,14 @@
 				10B8072A26A7E6E200B556B0 /* PhotoDetailsView.swift in Sources */,
 				10B806AA26A789FB00B556B0 /* AppDelegate.swift in Sources */,
 				10B8071626A7A49400B556B0 /* PhotosListUseCase.swift in Sources */,
+				10B8073426A80E4400B556B0 /* Data+Image.swift in Sources */,
 				10B806AC26A789FB00B556B0 /* SceneDelegate.swift in Sources */,
 				10B8071326A7A3AB00B556B0 /* PhotosListViewModel.swift in Sources */,
 				10B806E526A791E700B556B0 /* PhotosAPI.swift in Sources */,
 				10B8072C26A7E9BC00B556B0 /* PhotoDetailsViewModel.swift in Sources */,
 				10B8071A26A7B6BA00B556B0 /* PhotoCell.swift in Sources */,
 				10B8071126A7A16300B556B0 /* PhotosRepository.swift in Sources */,
+				10B8073226A80A4B00B556B0 /* UIImage+Data.swift in Sources */,
 				10B8073026A7FB3700B556B0 /* UIImage+AverageColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

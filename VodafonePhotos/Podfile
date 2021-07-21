@@ -10,7 +10,8 @@ target 'VodafonePhotos' do
     pod 'Alamofire'
   	pod 'SwiftyJSON'
   	pod 'SDWebImage'
-
+    pod 'Toast-Swift'
+    
   target 'VodafonePhotosTests' do
     inherit! :search_paths
     # Pods for testing

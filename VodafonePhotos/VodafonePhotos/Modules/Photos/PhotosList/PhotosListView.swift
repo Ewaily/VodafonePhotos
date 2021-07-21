@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class PhotosListView: BaseViewController {
     
@@ -53,8 +54,10 @@ class PhotosListView: BaseViewController {
     }
     
     private func fetchPhotos() {
+        self.view.makeToastActivity(.center)
         viewModel.fetchPhotos { [weak self] in
             guard let self = self else { return }
+            self.view.hideToastActivity()
             self.photosTableView.reloadData()
         }
     }
@@ -141,7 +144,7 @@ extension PhotosListView: UITableViewDataSource {
     }
     
     private func isProgressRow(for indexPath: IndexPath) -> Bool {
-        guard self.viewModel.canFetchPhotos else { return false }
+        guard self.viewModel.canFetchPhotos, ReachabilityManager.isReachable() else { return false }
         return indexPath.row == viewModel.countPhotos() - 1
     }
 }

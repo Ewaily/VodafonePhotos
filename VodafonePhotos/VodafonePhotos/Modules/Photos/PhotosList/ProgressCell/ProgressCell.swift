@@ -21,13 +21,7 @@ class ProgressCell: UITableViewCell {
     
     private func setupUI() {
         selectionStyle = .none
-        setupContainerView()
         setupProgressIndicatior()
-    }
-    
-    private func setupContainerView() {
-        containerView.borderWidth = Dimensions.APP_BORDER_WIDTH
-        containerView.borderColor = Colors.GRAY
     }
     
     private func setupProgressIndicatior() {

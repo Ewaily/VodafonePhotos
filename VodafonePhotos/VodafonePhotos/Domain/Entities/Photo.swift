@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct Photo {
+struct Photo: Codable {
     let id              : Int
     let author          : String
     let width           : Double

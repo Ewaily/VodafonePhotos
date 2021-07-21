@@ -12,7 +12,6 @@ class PhotoDetailsView: BaseViewController {
     
     private var viewModel: PhotoDetailsViewModel!
     
-//    @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -36,11 +35,11 @@ class PhotoDetailsView: BaseViewController {
         photoImageView.cornerRadius = 8
         photoImageView.clipsToBounds = true
         photoImageView.contentMode = .scaleAspectFit
-        photoImageView.sd_imageTransition = .fade
-        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL(),
-                                    placeholderImage: nil)
+            photoImageView.sd_imageTransition = .fade
+            photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+            photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+            photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL(),
+                                        placeholderImage: nil)
     }
     
     private func setupScrollView() {
