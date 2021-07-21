@@ -32,7 +32,7 @@ class AdPlaceholderCell: UITableViewCell {
     private func setupImageView() {
         photoImageView.cornerRadius = 8
         photoImageView.clipsToBounds = true
-        photoImageView.contentMode = .scaleAspectFill
+        photoImageView.contentMode = .scaleAspectFit
         photoImageView.image = Images.AD_PLACEHOLDER
     }
 }
