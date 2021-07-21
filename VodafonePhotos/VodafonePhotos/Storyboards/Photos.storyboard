@@ -38,6 +38,48 @@
             </objects>
             <point key="canvasLocation" x="139" y="119"/>
         </scene>
+        <!--Photo Details View-->
+        <scene sceneID="ihG-3z-QAI">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailsView" id="Rix-C8-Xvy" customClass="PhotoDetailsView" customModule="VodafonePhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Yf-wL-eO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-RV-mDS">
+                                <rect key="frame" x="20" y="44" width="374" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="bHX-1S-wCC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vpt-1r-1E1">
+                                <rect key="frame" x="10" y="76" width="394" height="776"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6dO-Oy-miW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6dO-Oy-miW" firstAttribute="trailing" secondItem="hHP-RV-mDS" secondAttribute="trailing" constant="20" id="67X-BE-Fp9"/>
+                            <constraint firstItem="Vpt-1r-1E1" firstAttribute="top" secondItem="hHP-RV-mDS" secondAttribute="bottom" constant="10" id="Edc-PU-Dn8"/>
+                            <constraint firstItem="Vpt-1r-1E1" firstAttribute="leading" secondItem="6dO-Oy-miW" secondAttribute="leading" constant="10" id="F4S-jg-FZK"/>
+                            <constraint firstItem="hHP-RV-mDS" firstAttribute="top" secondItem="6dO-Oy-miW" secondAttribute="top" id="OVn-mB-BH3"/>
+                            <constraint firstItem="6dO-Oy-miW" firstAttribute="trailing" secondItem="Vpt-1r-1E1" secondAttribute="trailing" constant="10" id="SNy-hD-KkK"/>
+                            <constraint firstItem="hHP-RV-mDS" firstAttribute="leading" secondItem="6dO-Oy-miW" secondAttribute="leading" constant="20" id="hSj-05-MsY"/>
+                            <constraint firstItem="6dO-Oy-miW" firstAttribute="bottom" secondItem="Vpt-1r-1E1" secondAttribute="bottom" constant="10" id="i0S-G4-niP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorNameLabel" destination="hHP-RV-mDS" id="gBl-wd-SDE"/>
+                        <outlet property="photoImageView" destination="Vpt-1r-1E1" id="5VX-3a-aAk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtC-WN-aax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="119"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

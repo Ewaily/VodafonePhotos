@@ -50,10 +50,10 @@ class PhotoCell: UITableViewCell {
         photoImageView.clipsToBounds = true
         photoImageView.contentMode = .scaleAspectFill
         photoImageView.sd_imageTransition = .fade
+        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
     }
     
     func bindCell(info: PhotoCellInfo) {
-        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         photoImageView.sd_setImage(with: info.photoImageURL,
                                     placeholderImage: nil)
     }

@@ -10,6 +10,7 @@ import UIKit
 class PhotosListView: BaseViewController {
     
     private var viewModel: PhotosListViewModel!
+    
     @IBOutlet weak var photosTableView: UITableView!
     
     override func viewDidLoad() {
@@ -78,6 +79,13 @@ class PhotosListView: BaseViewController {
         }
         return cell
     }
+    
+    private func openPhotoDetails(index: Int) {
+        guard let navigationController = navigationController else { return }
+        let photoDetailsViewInfo = viewModel.getPhotoDetailsViewInfo(at: index)
+        let navigationManger = NavigationManager(navigationController: navigationController)
+        navigationManger.openPhotoDetails(photoDetailsViewInfo: photoDetailsViewInfo)
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -85,6 +93,11 @@ class PhotosListView: BaseViewController {
 extension PhotosListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard !viewModel.checkIfAdCellType(at: indexPath.row) else { return }
+        openPhotoDetails(index: indexPath.row)
     }
 }
 

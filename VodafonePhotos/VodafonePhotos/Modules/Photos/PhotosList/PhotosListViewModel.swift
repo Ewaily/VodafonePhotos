@@ -65,4 +65,9 @@ class PhotosListViewModel {
         let photo = photos[index]
         return photo.isAdPlaceholder
     }
+    
+    func getPhotoDetailsViewInfo(at index: Int) -> PhotoDetailsViewInfo {
+        let photo = photos[index]
+        return PhotoDetailsViewInfo(authorName: photo.author, photoImageURL: photo.downloadURL)
+    }
 }
