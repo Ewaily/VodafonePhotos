@@ -8,4 +8,14 @@
 import UIKit
 
 class PhotosListView: BaseViewController {
+    
+    private var viewModel: PhotosListViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel = PhotosListViewModel()
+        viewModel.fetchPhotos {
+            
+        }
+    }
 }
