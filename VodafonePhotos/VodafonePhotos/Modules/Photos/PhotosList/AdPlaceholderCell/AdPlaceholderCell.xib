@@ -18,12 +18,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-bP-5Yb">
-                        <rect key="frame" x="0.0" y="0.0" width="599" height="280"/>
+                        <rect key="frame" x="2" y="2" width="595" height="276"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ijB-X3-Wsr">
-                                <rect key="frame" x="0.0" y="0.0" width="599" height="280"/>
+                                <rect key="frame" x="0.0" y="0.0" width="595" height="276"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="Gui-4b-ohi"/>
+                                    <constraint firstAttribute="height" constant="276" id="Gui-4b-ohi"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -38,10 +38,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Wbn-bP-5Yb" secondAttribute="trailing" id="5Io-cW-SBp"/>
-                    <constraint firstItem="Wbn-bP-5Yb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ssu-n8-ooj"/>
-                    <constraint firstAttribute="bottom" secondItem="Wbn-bP-5Yb" secondAttribute="bottom" id="XKV-00-InB"/>
-                    <constraint firstItem="Wbn-bP-5Yb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ztp-hH-bzt"/>
+                    <constraint firstAttribute="trailing" secondItem="Wbn-bP-5Yb" secondAttribute="trailing" constant="2" id="5Io-cW-SBp"/>
+                    <constraint firstItem="Wbn-bP-5Yb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="Ssu-n8-ooj"/>
+                    <constraint firstAttribute="bottom" secondItem="Wbn-bP-5Yb" secondAttribute="bottom" constant="2" id="XKV-00-InB"/>
+                    <constraint firstItem="Wbn-bP-5Yb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="ztp-hH-bzt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -26,9 +26,7 @@ class AdPlaceholderCell: UITableViewCell {
     }
     
     private func setupContainerView() {
-        containerView.borderWidth = Dimensions.APP_BORDER_WIDTH
         containerView.cornerRadius = Dimensions.APP_CORNER_RADIUS
-        containerView.borderColor = Colors.GRAY
     }
     
     private func setupImageView() {

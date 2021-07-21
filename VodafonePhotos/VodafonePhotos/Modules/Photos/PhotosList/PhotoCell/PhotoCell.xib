@@ -18,12 +18,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-bn-EKo">
-                        <rect key="frame" x="0.0" y="0.0" width="449" height="280"/>
+                        <rect key="frame" x="2" y="2" width="445" height="276"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNq-xm-voM">
-                                <rect key="frame" x="0.0" y="0.0" width="449" height="280"/>
+                                <rect key="frame" x="0.0" y="0.0" width="445" height="276"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="PBK-6s-XVq"/>
+                                    <constraint firstAttribute="height" constant="276" id="PBK-6s-XVq"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -38,10 +38,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="gTR-bn-EKo" secondAttribute="bottom" id="HBM-TW-aya"/>
-                    <constraint firstItem="gTR-bn-EKo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NOe-po-Gk0"/>
-                    <constraint firstAttribute="trailing" secondItem="gTR-bn-EKo" secondAttribute="trailing" id="dUU-za-51g"/>
-                    <constraint firstItem="gTR-bn-EKo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kR3-AE-Zf7"/>
+                    <constraint firstAttribute="bottom" secondItem="gTR-bn-EKo" secondAttribute="bottom" constant="2" id="HBM-TW-aya"/>
+                    <constraint firstItem="gTR-bn-EKo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="NOe-po-Gk0"/>
+                    <constraint firstAttribute="trailing" secondItem="gTR-bn-EKo" secondAttribute="trailing" constant="2" id="dUU-za-51g"/>
+                    <constraint firstItem="gTR-bn-EKo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="kR3-AE-Zf7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
