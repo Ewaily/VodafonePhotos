@@ -1,5 +1,5 @@
 //
-//  AdPlaceholderCell.swift
+//  ProgressCell.swift
 //  VodafonePhotos
 //
 //  Created by Muhammad Ewaily on 21/07/2021.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class AdPlaceholderCell: UITableViewCell {
-
-    static let ID = String(describing: AdPlaceholderCell.self)
+class ProgressCell: UITableViewCell {
     
-    @IBOutlet weak var photoImageView: UIImageView!
+    static let ID = String(describing: ProgressCell.self)
+    
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var progressIndicatior: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,19 +22,16 @@ class AdPlaceholderCell: UITableViewCell {
     private func setupUI() {
         selectionStyle = .none
         setupContainerView()
-        setupImageView()
+        setupProgressIndicatior()
     }
     
     private func setupContainerView() {
         containerView.borderWidth = Dimensions.APP_BORDER_WIDTH
-        containerView.cornerRadius = Dimensions.APP_CORNER_RADIUS
         containerView.borderColor = Colors.GRAY
     }
     
-    private func setupImageView() {
-        photoImageView.cornerRadius = 8
-        photoImageView.clipsToBounds = true
-        photoImageView.contentMode = .scaleAspectFill
-        photoImageView.image = Images.AD_PLACEHOLDER
+    private func setupProgressIndicatior() {
+        progressIndicatior.color = Colors.GRAY
+        progressIndicatior.startAnimating()
     }
 }

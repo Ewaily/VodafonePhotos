@@ -9,21 +9,44 @@ import Foundation
 
 class PhotosListViewModel {
     
-    var pageNumber: Int = 1
-    let pageLimit: Int = 10
+    private var pageNumber: Int = 1
+    private let pageLimit: Int = Constants.DEFAULT_PAGE_LIMIT
     private let useCase = PhotosListUseCase()
     private var photos: [Photo] = []
+    var canFetchPhotos: Bool = true
     
     func countPhotos() -> Int {
         return photos.count
     }
     
     func fetchPhotos(completion: @escaping () -> Void) {
+        canFetchPhotos = false
+        pageNumber = Constants.FIRST_PAGE_NUMBER
+        useCase.fetchPhotos(page: pageNumber, limit: pageLimit) { [weak self] result in
+            guard let self = self else { return }
+            self.canFetchPhotos = true
+            switch result {
+            case .success(let photos):
+                self.photos = photos
+                print(photos)
+                completion()
+            case .failure(let error):
+                completion()
+                print(error)
+            }
+        }
+    }
+    
+    func fetchMorePhotos(completion: @escaping () -> Void) {
+        guard canFetchPhotos else { return }
+        canFetchPhotos = false
+        pageNumber += 1
         useCase.fetchPhotos(page: pageNumber, limit: pageLimit) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let photos):
-                self.photos = photos
+                self.canFetchPhotos = !photos.isEmpty
+                self.photos += photos
                 print(photos)
                 completion()
             case .failure(let error):

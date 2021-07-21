@@ -53,6 +53,7 @@ class PhotoCell: UITableViewCell {
     }
     
     func bindCell(info: PhotoCellInfo) {
+        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         photoImageView.sd_setImage(with: info.photoImageURL,
                                     placeholderImage: nil)
     }

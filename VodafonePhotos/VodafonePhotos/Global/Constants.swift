@@ -8,7 +8,8 @@
 import UIKit
 
 struct Constants {
-    
+    static let FIRST_PAGE_NUMBER    = 1
+    static let DEFAULT_PAGE_LIMIT   = 10
 }
 
 enum Storyboards : String {
@@ -34,17 +35,17 @@ struct Fonts {
 }
 
 struct Colors {
-    static let PRIMARY_COLOR = UIColor(named: "PrimaryColor")
-    static let ACCENT_COLOR = UIColor(named: "AccentColor")
-    static let DARK_SHADE = UIColor(named: "DarkShade")
-    static let GRAY = UIColor(named: "Gray")
-    static let WHITE = UIColor(named: "White")
+    static let PRIMARY_COLOR        = UIColor(named: "PrimaryColor")
+    static let ACCENT_COLOR         = UIColor(named: "AccentColor")
+    static let DARK_SHADE           = UIColor(named: "DarkShade")
+    static let GRAY                 = UIColor(named: "Gray")
+    static let WHITE                = UIColor(named: "White")
 }
 
 struct Dimensions {
     
-    static let APP_CORNER_RADIUS : CGFloat = 4
-    static let APP_BORDER_WIDTH : CGFloat = 0.3
+    static let APP_CORNER_RADIUS    : CGFloat   = 4
+    static let APP_BORDER_WIDTH     : CGFloat   = 0.3
 }
 
 struct Images {

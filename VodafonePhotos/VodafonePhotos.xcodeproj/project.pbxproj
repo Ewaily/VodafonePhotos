@@ -39,6 +39,8 @@
 		10B8071F26A7BE2A00B556B0 /* AdPlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8071D26A7BE2A00B556B0 /* AdPlaceholderCell.swift */; };
 		10B8072026A7BE2A00B556B0 /* AdPlaceholderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B8071E26A7BE2A00B556B0 /* AdPlaceholderCell.xib */; };
 		10B8072226A7C94400B556B0 /* Array+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8072126A7C94400B556B0 /* Array+Add.swift */; };
+		10B8072626A7E0B200B556B0 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8072426A7E0B200B556B0 /* ProgressCell.swift */; };
+		10B8072726A7E0B200B556B0 /* ProgressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B8072526A7E0B200B556B0 /* ProgressCell.xib */; };
 		3C07C888947855C8F5D1E0BB /* Pods_VodafonePhotos_VodafonePhotosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */; };
 		BD080B563D054A5752DF73DA /* Pods_VodafonePhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */; };
 		F45B33511C0AD9BE8A692AD2 /* Pods_VodafonePhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16C0D54BD7D107E91BC2115 /* Pods_VodafonePhotosTests.framework */; };
@@ -101,6 +103,8 @@
 		10B8071D26A7BE2A00B556B0 /* AdPlaceholderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPlaceholderCell.swift; sourceTree = "<group>"; };
 		10B8071E26A7BE2A00B556B0 /* AdPlaceholderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdPlaceholderCell.xib; sourceTree = "<group>"; };
 		10B8072126A7C94400B556B0 /* Array+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Add.swift"; sourceTree = "<group>"; };
+		10B8072426A7E0B200B556B0 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
+		10B8072526A7E0B200B556B0 /* ProgressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressCell.xib; sourceTree = "<group>"; };
 		1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2367E7CCAD946FD604FBFDA2 /* Pods-VodafonePhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodafonePhotos.release.xcconfig"; path = "Target Support Files/Pods-VodafonePhotos/Pods-VodafonePhotos.release.xcconfig"; sourceTree = "<group>"; };
 		32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos_VodafonePhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,6 +363,7 @@
 		10B8070C26A79CC500B556B0 /* PhotosList */ = {
 			isa = PBXGroup;
 			children = (
+				10B8072326A7E09D00B556B0 /* ProgressCell */,
 				10B8071C26A7BE1900B556B0 /* AdPlaceholderCell */,
 				10B8071726A7B65F00B556B0 /* PhotoCell */,
 				10B8070D26A79CF400B556B0 /* PhotosListView.swift */,
@@ -399,6 +404,15 @@
 				10B8071E26A7BE2A00B556B0 /* AdPlaceholderCell.xib */,
 			);
 			path = AdPlaceholderCell;
+			sourceTree = "<group>";
+		};
+		10B8072326A7E09D00B556B0 /* ProgressCell */ = {
+			isa = PBXGroup;
+			children = (
+				10B8072426A7E0B200B556B0 /* ProgressCell.swift */,
+				10B8072526A7E0B200B556B0 /* ProgressCell.xib */,
+			);
+			path = ProgressCell;
 			sourceTree = "<group>";
 		};
 		4737C952A731BADFCECF775F /* Pods */ = {
@@ -538,6 +552,7 @@
 				10B806B326A789FE00B556B0 /* Assets.xcassets in Resources */,
 				10B806B126A789FB00B556B0 /* Main.storyboard in Resources */,
 				10B8071B26A7B6BA00B556B0 /* PhotoCell.xib in Resources */,
+				10B8072726A7E0B200B556B0 /* ProgressCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +691,7 @@
 				10B8071F26A7BE2A00B556B0 /* AdPlaceholderCell.swift in Sources */,
 				10B8070526A79B2400B556B0 /* Result.swift in Sources */,
 				10B8070726A79B3400B556B0 /* BaseViewController.swift in Sources */,
+				10B8072626A7E0B200B556B0 /* ProgressCell.swift in Sources */,
 				10B8070326A79AE500B556B0 /* Constants.swift in Sources */,
 				10B806F926A79A0600B556B0 /* NavigationManager.swift in Sources */,
 				10B806FE26A79A6800B556B0 /* UIView+Inspectable.swift in Sources */,

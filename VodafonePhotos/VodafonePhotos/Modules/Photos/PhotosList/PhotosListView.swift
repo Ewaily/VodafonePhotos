@@ -30,6 +30,7 @@ class PhotosListView: BaseViewController {
     private func setupPhotosTableView() {
         let photoCell = UINib(nibName: PhotoCell.ID, bundle: nil)
         let adPlaceholderCell = UINib(nibName: AdPlaceholderCell.ID, bundle: nil)
+        let progressCell = UINib(nibName: ProgressCell.ID, bundle: nil)
         
         photosTableView.delegate = self
         photosTableView.dataSource = self
@@ -38,10 +39,18 @@ class PhotosListView: BaseViewController {
         photosTableView.separatorStyle = .none
         photosTableView.register(photoCell, forCellReuseIdentifier: PhotoCell.ID)
         photosTableView.register(adPlaceholderCell, forCellReuseIdentifier: AdPlaceholderCell.ID)
+        photosTableView.register(progressCell, forCellReuseIdentifier: ProgressCell.ID)
     }
     
     private func fetchPhotos() {
         viewModel.fetchPhotos { [weak self] in
+            guard let self = self else { return }
+            self.photosTableView.reloadData()
+        }
+    }
+    
+    private func fetchMorePhotos() {
+        viewModel.fetchMorePhotos { [weak self] in
             guard let self = self else { return }
             self.photosTableView.reloadData()
         }
@@ -58,6 +67,13 @@ class PhotosListView: BaseViewController {
     
     private func instantiateAdPlaceholderCell(_ tableView: UITableView) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AdPlaceholderCell.ID) as? AdPlaceholderCell else {
+            return UITableViewCell()
+        }
+        return cell
+    }
+    
+    private func instantiateProgressCell(_ tableView: UITableView) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProgressCell.ID) as? ProgressCell else {
             return UITableViewCell()
         }
         return cell
@@ -84,12 +100,26 @@ extension PhotosListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if viewModel.checkIfAdCellType(at: indexPath.row) {
+        if isProgressRow(for: indexPath) {
+            return instantiateProgressCell(tableView)
+        }
+        else if viewModel.checkIfAdCellType(at: indexPath.row) {
             return instantiateAdPlaceholderCell(tableView)
+            
         }
         else {
             return instantiatePhotoCell(tableView, indexPath)
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if isProgressRow(for: indexPath) {
+            fetchMorePhotos()
+        }
+    }
+    
+    private func isProgressRow(for indexPath: IndexPath) -> Bool {
+        guard self.viewModel.canFetchPhotos else { return false }
+        return indexPath.row == viewModel.countPhotos() - 1
+    }
 }
-
