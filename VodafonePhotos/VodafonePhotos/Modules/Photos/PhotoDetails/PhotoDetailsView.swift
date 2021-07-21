@@ -28,18 +28,20 @@ class PhotoDetailsView: BaseViewController {
         setupImageView()
         setupScrollView()
         setupAuthorName()
-        setupViewBackgroundColor()
     }
     
     private func setupImageView() {
         photoImageView.cornerRadius = 8
         photoImageView.clipsToBounds = true
         photoImageView.contentMode = .scaleAspectFit
-            photoImageView.sd_imageTransition = .fade
-            photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-            photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-            photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL(),
-                                        placeholderImage: nil)
+        photoImageView.sd_imageTransition = .fade
+        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL()) { image, _, _, _ in
+            if let image = image, let dominantColor = image.averageColor {
+                self.view.backgroundColor = dominantColor
+            }
+        }
     }
     
     private func setupScrollView() {

@@ -46,6 +46,6 @@ struct PhotosDTO {
     }
     
     func toDomain() -> Photo {
-        return Photo(id: id, author: author, width: width, height: height, URL: URL, downloadURL: downloadURL, isAdPlaceholder: isAdPlaceholder)
+        return Photo(id: id, author: author, width: width, height: height, URL: URL, downloadURL: downloadURL, isAdPlaceholder: isAdPlaceholder, isOfflineCell: false)
     }
 }

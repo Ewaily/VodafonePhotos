@@ -49,6 +49,7 @@ struct Dimensions {
 
 struct Images {
     static let AD_PLACEHOLDER = UIImage(named: "adPlaceholder")
+    static let NO_INTERNET_CONNECTION = UIImage(named: "noInternectConnection")
 }
 
 struct Strings {

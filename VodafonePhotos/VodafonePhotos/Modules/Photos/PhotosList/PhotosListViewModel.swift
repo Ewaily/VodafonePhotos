@@ -21,21 +21,26 @@ class PhotosListViewModel {
     
     func fetchPhotos(completion: @escaping () -> Void) {
         if ReachabilityManager.isReachable() {
-        canFetchPhotos = false
-        pageNumber = Constants.FIRST_PAGE_NUMBER
-        useCase.fetchPhotos(page: pageNumber, limit: pageLimit) { [weak self] result in
-            guard let self = self else { return }
-            self.canFetchPhotos = true
-            switch result {
-            case .success(let photos):
-                self.photos = photos
-                print(photos)
-                completion()
-            case .failure(let error):
-                completion()
-                print(error)
+            canFetchPhotos = false
+            pageNumber = Constants.FIRST_PAGE_NUMBER
+            useCase.fetchPhotos(page: pageNumber, limit: pageLimit) { [weak self] result in
+                guard let self = self else { return }
+                self.canFetchPhotos = true
+                switch result {
+                case .success(let photos):
+                    self.photos = photos
+                    print(photos)
+                    if self.photos.count < 25 {
+                        self.handlePhotosCaching(completion: completion)
+                    }
+                    else {
+                        completion()
+                    }
+                case .failure(let error):
+                    completion()
+                    print(error)
+                }
             }
-        }
         }
         else {
             useCase.fetchCachedPhotos { [weak self] result in
@@ -44,9 +49,15 @@ class PhotosListViewModel {
                 switch result {
                 case .success(let photos):
                     self.photos = photos
+                    if self.photos.isEmpty {
+                        self.addOfflineCell()
+                    }
                     print(photos)
                     completion()
                 case .failure(let error):
+                    if self.photos.isEmpty {
+                        self.addOfflineCell()
+                    }
                     completion()
                     print(error)
                 }
@@ -65,7 +76,12 @@ class PhotosListViewModel {
                 self.canFetchPhotos = !photos.isEmpty
                 self.photos += photos
                 print(photos)
-                completion()
+                if self.photos.count < 25 {
+                    self.handlePhotosCaching(completion: completion)
+                }
+                else {
+                    completion()
+                }
             case .failure(let error):
                 completion()
                 print(error)
@@ -86,5 +102,29 @@ class PhotosListViewModel {
     func getPhotoDetailsViewInfo(at index: Int) -> PhotoDetailsViewInfo {
         let photo = photos[index]
         return PhotoDetailsViewInfo(authorName: photo.author, photoImageURL: photo.downloadURL)
+    }
+    
+    private func handlePhotosCaching(completion: @escaping () -> Void) {
+        useCase.cachePhotos(photos: self.photos, completion: completion)
+    }
+    
+    func refreshPhotos(completion: @escaping () -> Void) {
+        if ReachabilityManager.isReachable() {
+            photos.removeAll()
+            canFetchPhotos = false
+            fetchPhotos(completion: completion)
+        }
+        else {
+            completion()
+        }
+    }
+    
+    private func addOfflineCell() {
+        photos.append(.init(id: 0, author: "", width: 0.0, height: 0.0, URL: nil, downloadURL: nil, isAdPlaceholder: false, isOfflineCell: true))
+    }
+    
+    func checkIfOfflineCellType(at index: Int) -> Bool {
+        let photo = photos[index]
+        return photo.isOfflineCell
     }
 }

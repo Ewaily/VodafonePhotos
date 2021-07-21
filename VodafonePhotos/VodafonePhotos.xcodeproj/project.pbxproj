@@ -47,6 +47,8 @@
 		10B8073226A80A4B00B556B0 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073126A80A4B00B556B0 /* UIImage+Data.swift */; };
 		10B8073426A80E4400B556B0 /* Data+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073326A80E4400B556B0 /* Data+Image.swift */; };
 		10B8073726A813C100B556B0 /* CachedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073626A813C100B556B0 /* CachedPhotos.swift */; };
+		10B8073B26A894C400B556B0 /* OfflineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073926A894C400B556B0 /* OfflineCell.swift */; };
+		10B8073C26A894C400B556B0 /* OfflineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B8073A26A894C400B556B0 /* OfflineCell.xib */; };
 		3C07C888947855C8F5D1E0BB /* Pods_VodafonePhotos_VodafonePhotosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */; };
 		BD080B563D054A5752DF73DA /* Pods_VodafonePhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */; };
 		F45B33511C0AD9BE8A692AD2 /* Pods_VodafonePhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16C0D54BD7D107E91BC2115 /* Pods_VodafonePhotosTests.framework */; };
@@ -117,6 +119,8 @@
 		10B8073126A80A4B00B556B0 /* UIImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Data.swift"; sourceTree = "<group>"; };
 		10B8073326A80E4400B556B0 /* Data+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Image.swift"; sourceTree = "<group>"; };
 		10B8073626A813C100B556B0 /* CachedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedPhotos.swift; sourceTree = "<group>"; };
+		10B8073926A894C400B556B0 /* OfflineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineCell.swift; sourceTree = "<group>"; };
+		10B8073A26A894C400B556B0 /* OfflineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineCell.xib; sourceTree = "<group>"; };
 		1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2367E7CCAD946FD604FBFDA2 /* Pods-VodafonePhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodafonePhotos.release.xcconfig"; path = "Target Support Files/Pods-VodafonePhotos/Pods-VodafonePhotos.release.xcconfig"; sourceTree = "<group>"; };
 		32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos_VodafonePhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -380,6 +384,7 @@
 		10B8070C26A79CC500B556B0 /* PhotosList */ = {
 			isa = PBXGroup;
 			children = (
+				10B8073826A894B500B556B0 /* OfflineCell */,
 				10B8072326A7E09D00B556B0 /* ProgressCell */,
 				10B8071C26A7BE1900B556B0 /* AdPlaceholderCell */,
 				10B8071726A7B65F00B556B0 /* PhotoCell */,
@@ -447,6 +452,15 @@
 				10B8073626A813C100B556B0 /* CachedPhotos.swift */,
 			);
 			path = PersistantStorage;
+			sourceTree = "<group>";
+		};
+		10B8073826A894B500B556B0 /* OfflineCell */ = {
+			isa = PBXGroup;
+			children = (
+				10B8073926A894C400B556B0 /* OfflineCell.swift */,
+				10B8073A26A894C400B556B0 /* OfflineCell.xib */,
+			);
+			path = OfflineCell;
 			sourceTree = "<group>";
 		};
 		4737C952A731BADFCECF775F /* Pods */ = {
@@ -583,6 +597,7 @@
 				10B8072026A7BE2A00B556B0 /* AdPlaceholderCell.xib in Resources */,
 				10B806B626A789FE00B556B0 /* LaunchScreen.storyboard in Resources */,
 				10B8070926A79B9D00B556B0 /* Photos.storyboard in Resources */,
+				10B8073C26A894C400B556B0 /* OfflineCell.xib in Resources */,
 				10B806B326A789FE00B556B0 /* Assets.xcassets in Resources */,
 				10B806B126A789FB00B556B0 /* Main.storyboard in Resources */,
 				10B8071B26A7B6BA00B556B0 /* PhotoCell.xib in Resources */,
@@ -729,6 +744,7 @@
 				10B8073726A813C100B556B0 /* CachedPhotos.swift in Sources */,
 				10B8070326A79AE500B556B0 /* Constants.swift in Sources */,
 				10B806F926A79A0600B556B0 /* NavigationManager.swift in Sources */,
+				10B8073B26A894C400B556B0 /* OfflineCell.swift in Sources */,
 				10B806FE26A79A6800B556B0 /* UIView+Inspectable.swift in Sources */,
 				10B806F326A7971900B556B0 /* Photo.swift in Sources */,
 				10B806EF26A7947000B556B0 /* PhotosListingResponseDTO.swift in Sources */,

@@ -11,6 +11,7 @@ import Toast_Swift
 class PhotosListView: BaseViewController {
     
     private var viewModel: PhotosListViewModel!
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var photosTableView: UITableView!
     
@@ -32,6 +33,7 @@ class PhotosListView: BaseViewController {
     
     private func setupUI() {
         setupPhotosTableView()
+        addPullPhotosToRefresh()
     }
     
     private func setupNavigationBarTitle() {
@@ -42,6 +44,7 @@ class PhotosListView: BaseViewController {
         let photoCell = UINib(nibName: PhotoCell.ID, bundle: nil)
         let adPlaceholderCell = UINib(nibName: AdPlaceholderCell.ID, bundle: nil)
         let progressCell = UINib(nibName: ProgressCell.ID, bundle: nil)
+        let offlineCell = UINib(nibName: OfflineCell.ID, bundle: nil)
         
         photosTableView.delegate = self
         photosTableView.dataSource = self
@@ -51,6 +54,7 @@ class PhotosListView: BaseViewController {
         photosTableView.register(photoCell, forCellReuseIdentifier: PhotoCell.ID)
         photosTableView.register(adPlaceholderCell, forCellReuseIdentifier: AdPlaceholderCell.ID)
         photosTableView.register(progressCell, forCellReuseIdentifier: ProgressCell.ID)
+        photosTableView.register(offlineCell, forCellReuseIdentifier: OfflineCell.ID)
     }
     
     private func fetchPhotos() {
@@ -92,11 +96,31 @@ class PhotosListView: BaseViewController {
         return cell
     }
     
+    private func instantiateOfflineCell(_ tableView: UITableView) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OfflineCell.ID) as? OfflineCell else {
+            return UITableViewCell()
+        }
+        return cell
+    }
+    
     private func openPhotoDetails(index: Int) {
         guard let navigationController = navigationController else { return }
         let photoDetailsViewInfo = viewModel.getPhotoDetailsViewInfo(at: index)
         let navigationManger = NavigationManager(navigationController: navigationController)
         navigationManger.openPhotoDetails(photoDetailsViewInfo: photoDetailsViewInfo)
+    }
+    
+    private func addPullPhotosToRefresh() {
+        refreshControl.addTarget(self, action:  #selector(refreshPhotosTableView), for: .valueChanged)
+        photosTableView.addSubview(refreshControl)
+    }
+    
+    @objc private func refreshPhotosTableView(_ sender: AnyObject) {
+        viewModel.refreshPhotos { [weak self] in
+            guard let self = self else { return }
+            self.photosTableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
@@ -108,7 +132,7 @@ extension PhotosListView: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard !viewModel.checkIfAdCellType(at: indexPath.row) else { return }
+        guard !viewModel.checkIfAdCellType(at: indexPath.row), !viewModel.checkIfOfflineCellType(at: indexPath.row) else { return }
         openPhotoDetails(index: indexPath.row)
     }
 }
@@ -125,7 +149,11 @@ extension PhotosListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isProgressRow(for: indexPath) {
+        if viewModel.checkIfOfflineCellType(at: indexPath.row) {
+            return instantiateOfflineCell(tableView)
+            
+        }
+        else if isProgressRow(for: indexPath) {
             return instantiateProgressCell(tableView)
         }
         else if viewModel.checkIfAdCellType(at: indexPath.row) {

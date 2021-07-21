@@ -16,4 +16,5 @@ struct Photo: Codable {
     let URL             : URL?
     let downloadURL     : URL?
     let isAdPlaceholder : Bool
+    let isOfflineCell   : Bool
 }

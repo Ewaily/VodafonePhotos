@@ -17,14 +17,16 @@ struct PhotosRepository {
             switch result {
             case .success(let photosListingDTO):
                 let photos = photosListingDTO.photos.compactMap( { $0.toDomain()} )
-                if photos.count < 25 {
-                    self.cacheSource.cachePhotos(photos: photos)
-                }
                 completion(.success(photos))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
+    }
+    
+    func cachePhotos(photos: [Photo], completion: @escaping () -> Void) {
+        cacheSource.cachePhotos(photos: photos)
+        completion()
     }
     
     func fetchCachedPhotos(completion: @escaping (Result<[Photo], String>) -> Void) {
