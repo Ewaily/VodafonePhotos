@@ -7,7 +7,7 @@
 
 import SwiftyJSON
 
-struct SearchResponseDTO {
+struct PhotosListingResponseDTO {
     let photos    : [PhotosDTO]
     
     init(json: JSON) {
