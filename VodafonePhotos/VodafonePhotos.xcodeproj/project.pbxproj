@@ -34,6 +34,8 @@
 		10B8071126A7A16300B556B0 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8071026A7A16300B556B0 /* PhotosRepository.swift */; };
 		10B8071326A7A3AB00B556B0 /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8071226A7A3AB00B556B0 /* PhotosListViewModel.swift */; };
 		10B8071626A7A49400B556B0 /* PhotosListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8071526A7A49400B556B0 /* PhotosListUseCase.swift */; };
+		10B8071A26A7B6BA00B556B0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8071826A7B6BA00B556B0 /* PhotoCell.swift */; };
+		10B8071B26A7B6BA00B556B0 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B8071926A7B6BA00B556B0 /* PhotoCell.xib */; };
 		3C07C888947855C8F5D1E0BB /* Pods_VodafonePhotos_VodafonePhotosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */; };
 		BD080B563D054A5752DF73DA /* Pods_VodafonePhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */; };
 		F45B33511C0AD9BE8A692AD2 /* Pods_VodafonePhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16C0D54BD7D107E91BC2115 /* Pods_VodafonePhotosTests.framework */; };
@@ -91,6 +93,8 @@
 		10B8071026A7A16300B556B0 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
 		10B8071226A7A3AB00B556B0 /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
 		10B8071526A7A49400B556B0 /* PhotosListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListUseCase.swift; sourceTree = "<group>"; };
+		10B8071826A7B6BA00B556B0 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		10B8071926A7B6BA00B556B0 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2367E7CCAD946FD604FBFDA2 /* Pods-VodafonePhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodafonePhotos.release.xcconfig"; path = "Target Support Files/Pods-VodafonePhotos/Pods-VodafonePhotos.release.xcconfig"; sourceTree = "<group>"; };
 		32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos_VodafonePhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -348,6 +352,7 @@
 		10B8070C26A79CC500B556B0 /* PhotosList */ = {
 			isa = PBXGroup;
 			children = (
+				10B8071726A7B65F00B556B0 /* PhotoCell */,
 				10B8070D26A79CF400B556B0 /* PhotosListView.swift */,
 				10B8071226A7A3AB00B556B0 /* PhotosListViewModel.swift */,
 			);
@@ -368,6 +373,15 @@
 				10B8071526A7A49400B556B0 /* PhotosListUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		10B8071726A7B65F00B556B0 /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				10B8071826A7B6BA00B556B0 /* PhotoCell.swift */,
+				10B8071926A7B6BA00B556B0 /* PhotoCell.xib */,
+			);
+			path = PhotoCell;
 			sourceTree = "<group>";
 		};
 		4737C952A731BADFCECF775F /* Pods */ = {
@@ -505,6 +519,7 @@
 				10B8070926A79B9D00B556B0 /* Photos.storyboard in Resources */,
 				10B806B326A789FE00B556B0 /* Assets.xcassets in Resources */,
 				10B806B126A789FB00B556B0 /* Main.storyboard in Resources */,
+				10B8071B26A7B6BA00B556B0 /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +667,7 @@
 				10B806AC26A789FB00B556B0 /* SceneDelegate.swift in Sources */,
 				10B8071326A7A3AB00B556B0 /* PhotosListViewModel.swift in Sources */,
 				10B806E526A791E700B556B0 /* PhotosAPI.swift in Sources */,
+				10B8071A26A7B6BA00B556B0 /* PhotoCell.swift in Sources */,
 				10B8071126A7A16300B556B0 /* PhotosRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

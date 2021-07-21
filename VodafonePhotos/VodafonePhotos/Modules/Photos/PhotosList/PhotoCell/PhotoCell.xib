@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="280" id="KGk-i7-Jjw" customClass="PhotoCell" customModule="VodafonePhotos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="280"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="449" height="280"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-bn-EKo">
+                        <rect key="frame" x="0.0" y="0.0" width="449" height="280"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nNq-xm-voM">
+                                <rect key="frame" x="0.0" y="0.0" width="449" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="PBK-6s-XVq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nNq-xm-voM" firstAttribute="top" secondItem="gTR-bn-EKo" secondAttribute="top" id="7nw-hP-ExH"/>
+                            <constraint firstAttribute="trailing" secondItem="nNq-xm-voM" secondAttribute="trailing" id="9XS-KX-3qV"/>
+                            <constraint firstItem="nNq-xm-voM" firstAttribute="leading" secondItem="gTR-bn-EKo" secondAttribute="leading" id="A16-bK-sAk"/>
+                            <constraint firstAttribute="bottom" secondItem="nNq-xm-voM" secondAttribute="bottom" id="ThF-ww-Snk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="gTR-bn-EKo" secondAttribute="bottom" id="HBM-TW-aya"/>
+                    <constraint firstItem="gTR-bn-EKo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NOe-po-Gk0"/>
+                    <constraint firstAttribute="trailing" secondItem="gTR-bn-EKo" secondAttribute="trailing" id="dUU-za-51g"/>
+                    <constraint firstItem="gTR-bn-EKo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kR3-AE-Zf7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="gTR-bn-EKo" id="rRn-mu-qa5"/>
+                <outlet property="photoImageView" destination="nNq-xm-voM" id="2DW-X0-AaS"/>
+            </connections>
+            <point key="canvasLocation" x="234.05797101449278" y="164.39732142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

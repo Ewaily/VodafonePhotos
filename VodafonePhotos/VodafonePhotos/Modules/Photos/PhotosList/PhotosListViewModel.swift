@@ -32,4 +32,9 @@ class PhotosListViewModel {
             }
         }
     }
+    
+    func getPhotoInfo(at index: Int) -> PhotoCellInfo {
+        let photo = photos[index]
+        return PhotoCellInfo(photoImageURL: photo.downloadURL)
+    }
 }

@@ -15,9 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S5d-hw-mAA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S5d-hw-mAA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0W1-Sp-z2R"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S5d-hw-mAA" secondAttribute="trailing" id="3jY-pg-FyA"/>
+                            <constraint firstItem="S5d-hw-mAA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="IO3-mL-YGK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="S5d-hw-mAA" secondAttribute="bottom" id="Sbf-lV-crk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photosTableView" destination="S5d-hw-mAA" id="gwK-d8-DYA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +40,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
