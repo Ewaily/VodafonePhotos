@@ -46,39 +46,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-RV-mDS">
-                                <rect key="frame" x="20" y="44" width="374" height="22"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSz-P3-0ug">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lfo-kv-nlX">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="bHX-1S-wCC"/>
+                                    <constraint firstAttribute="bottom" secondItem="lfo-kv-nlX" secondAttribute="bottom" id="CEH-1P-Ill"/>
+                                    <constraint firstItem="lfo-kv-nlX" firstAttribute="height" secondItem="mSz-P3-0ug" secondAttribute="height" id="Dlm-U4-p4o"/>
+                                    <constraint firstAttribute="trailing" secondItem="lfo-kv-nlX" secondAttribute="trailing" id="QRY-Mq-XRD"/>
+                                    <constraint firstItem="lfo-kv-nlX" firstAttribute="top" secondItem="mSz-P3-0ug" secondAttribute="top" id="Uyr-vF-Ewp"/>
+                                    <constraint firstItem="lfo-kv-nlX" firstAttribute="width" secondItem="mSz-P3-0ug" secondAttribute="width" id="Xxb-hQ-WAk"/>
+                                    <constraint firstItem="lfo-kv-nlX" firstAttribute="leading" secondItem="mSz-P3-0ug" secondAttribute="leading" id="uxe-24-zFL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vpt-1r-1E1">
-                                <rect key="frame" x="10" y="76" width="394" height="776"/>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6dO-Oy-miW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6dO-Oy-miW" firstAttribute="trailing" secondItem="hHP-RV-mDS" secondAttribute="trailing" constant="20" id="67X-BE-Fp9"/>
-                            <constraint firstItem="Vpt-1r-1E1" firstAttribute="top" secondItem="hHP-RV-mDS" secondAttribute="bottom" constant="10" id="Edc-PU-Dn8"/>
-                            <constraint firstItem="Vpt-1r-1E1" firstAttribute="leading" secondItem="6dO-Oy-miW" secondAttribute="leading" constant="10" id="F4S-jg-FZK"/>
-                            <constraint firstItem="hHP-RV-mDS" firstAttribute="top" secondItem="6dO-Oy-miW" secondAttribute="top" id="OVn-mB-BH3"/>
-                            <constraint firstItem="6dO-Oy-miW" firstAttribute="trailing" secondItem="Vpt-1r-1E1" secondAttribute="trailing" constant="10" id="SNy-hD-KkK"/>
-                            <constraint firstItem="hHP-RV-mDS" firstAttribute="leading" secondItem="6dO-Oy-miW" secondAttribute="leading" constant="20" id="hSj-05-MsY"/>
-                            <constraint firstItem="6dO-Oy-miW" firstAttribute="bottom" secondItem="Vpt-1r-1E1" secondAttribute="bottom" constant="10" id="i0S-G4-niP"/>
+                            <constraint firstItem="mSz-P3-0ug" firstAttribute="leading" secondItem="6dO-Oy-miW" secondAttribute="leading" id="5mv-Zl-fZ7"/>
+                            <constraint firstItem="mSz-P3-0ug" firstAttribute="top" secondItem="6dO-Oy-miW" secondAttribute="top" id="BJw-h5-zhH"/>
+                            <constraint firstItem="mSz-P3-0ug" firstAttribute="bottom" secondItem="6dO-Oy-miW" secondAttribute="bottom" id="bSR-Ua-ouT"/>
+                            <constraint firstItem="mSz-P3-0ug" firstAttribute="trailing" secondItem="6dO-Oy-miW" secondAttribute="trailing" id="iEv-Bt-sDu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authorNameLabel" destination="hHP-RV-mDS" id="gBl-wd-SDE"/>
-                        <outlet property="photoImageView" destination="Vpt-1r-1E1" id="5VX-3a-aAk"/>
+                        <outlet property="photoImageView" destination="lfo-kv-nlX" id="z9C-Kk-L7L"/>
+                        <outlet property="scrollView" destination="mSz-P3-0ug" id="1hE-Sc-PcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtC-WN-aax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="119"/>
+            <point key="canvasLocation" x="1195.6521739130435" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>
