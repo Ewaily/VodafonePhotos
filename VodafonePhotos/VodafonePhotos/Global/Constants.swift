@@ -55,4 +55,6 @@ struct Images {
 
 struct Strings {
     static let Photos_LISTING = "Photos Listing"
+    static let AUTHOR_NAME_TEST = "Muhammad Ewaily"
+    static let PHOTO_IMAGE_URL_TEST = "https://picsum.photos/id/0/5616/3744"
 }

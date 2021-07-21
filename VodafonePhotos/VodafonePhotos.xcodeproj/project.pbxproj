@@ -12,7 +12,6 @@
 		10B806B126A789FB00B556B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B806AF26A789FB00B556B0 /* Main.storyboard */; };
 		10B806B326A789FE00B556B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B806B226A789FE00B556B0 /* Assets.xcassets */; };
 		10B806B626A789FE00B556B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B806B426A789FE00B556B0 /* LaunchScreen.storyboard */; };
-		10B806C126A789FE00B556B0 /* VodafonePhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806C026A789FE00B556B0 /* VodafonePhotosTests.swift */; };
 		10B806CC26A789FE00B556B0 /* VodafonePhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806CB26A789FE00B556B0 /* VodafonePhotosUITests.swift */; };
 		10B806E326A791A300B556B0 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806E226A791A300B556B0 /* BaseAPI.swift */; };
 		10B806E526A791E700B556B0 /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B806E426A791E700B556B0 /* PhotosAPI.swift */; };
@@ -49,6 +48,8 @@
 		10B8073726A813C100B556B0 /* CachedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073626A813C100B556B0 /* CachedPhotos.swift */; };
 		10B8073B26A894C400B556B0 /* OfflineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073926A894C400B556B0 /* OfflineCell.swift */; };
 		10B8073C26A894C400B556B0 /* OfflineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B8073A26A894C400B556B0 /* OfflineCell.xib */; };
+		10B8073F26A8B23100B556B0 /* PhotosListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8073E26A8B23100B556B0 /* PhotosListViewModelTests.swift */; };
+		10B8074126A8B69600B556B0 /* PhotoDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B8074026A8B69600B556B0 /* PhotoDetailsViewModelTests.swift */; };
 		3C07C888947855C8F5D1E0BB /* Pods_VodafonePhotos_VodafonePhotosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */; };
 		BD080B563D054A5752DF73DA /* Pods_VodafonePhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */; };
 		F45B33511C0AD9BE8A692AD2 /* Pods_VodafonePhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16C0D54BD7D107E91BC2115 /* Pods_VodafonePhotosTests.framework */; };
@@ -81,7 +82,6 @@
 		10B806B526A789FE00B556B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10B806B726A789FE00B556B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B806BC26A789FE00B556B0 /* VodafonePhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodafonePhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10B806C026A789FE00B556B0 /* VodafonePhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodafonePhotosTests.swift; sourceTree = "<group>"; };
 		10B806C226A789FE00B556B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10B806C726A789FE00B556B0 /* VodafonePhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodafonePhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B806CB26A789FE00B556B0 /* VodafonePhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodafonePhotosUITests.swift; sourceTree = "<group>"; };
@@ -121,6 +121,9 @@
 		10B8073626A813C100B556B0 /* CachedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedPhotos.swift; sourceTree = "<group>"; };
 		10B8073926A894C400B556B0 /* OfflineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineCell.swift; sourceTree = "<group>"; };
 		10B8073A26A894C400B556B0 /* OfflineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineCell.xib; sourceTree = "<group>"; };
+		10B8073D26A8B23100B556B0 /* VodafonePhotosTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VodafonePhotosTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		10B8073E26A8B23100B556B0 /* PhotosListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModelTests.swift; sourceTree = "<group>"; };
+		10B8074026A8B69600B556B0 /* PhotoDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		1946C04B13FDCC2206834E6D /* Pods_VodafonePhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2367E7CCAD946FD604FBFDA2 /* Pods-VodafonePhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodafonePhotos.release.xcconfig"; path = "Target Support Files/Pods-VodafonePhotos/Pods-VodafonePhotos.release.xcconfig"; sourceTree = "<group>"; };
 		32BA06F17C9009DF4C61E28F /* Pods_VodafonePhotos_VodafonePhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodafonePhotos_VodafonePhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,8 +202,10 @@
 		10B806BF26A789FE00B556B0 /* VodafonePhotosTests */ = {
 			isa = PBXGroup;
 			children = (
-				10B806C026A789FE00B556B0 /* VodafonePhotosTests.swift */,
 				10B806C226A789FE00B556B0 /* Info.plist */,
+				10B8073E26A8B23100B556B0 /* PhotosListViewModelTests.swift */,
+				10B8073D26A8B23100B556B0 /* VodafonePhotosTests-Bridging-Header.h */,
+				10B8074026A8B69600B556B0 /* PhotoDetailsViewModelTests.swift */,
 			);
 			path = VodafonePhotosTests;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 					};
 					10B806BB26A789FE00B556B0 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = 10B806A526A789FB00B556B0;
 					};
 					10B806C626A789FE00B556B0 = {
@@ -768,7 +774,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10B806C126A789FE00B556B0 /* VodafonePhotosTests.swift in Sources */,
+				10B8074126A8B69600B556B0 /* PhotoDetailsViewModelTests.swift in Sources */,
+				10B8073F26A8B23100B556B0 /* PhotosListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,6 +984,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6675BR2529;
 				INFOPLIST_FILE = VodafonePhotosTests/Info.plist;
@@ -988,6 +996,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VodafonePhotosTests/VodafonePhotosTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodafonePhotos.app/VodafonePhotos";
@@ -1000,6 +1010,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6675BR2529;
 				INFOPLIST_FILE = VodafonePhotosTests/Info.plist;
@@ -1011,6 +1022,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ewaily.VodafonePhotosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VodafonePhotosTests/VodafonePhotosTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodafonePhotos.app/VodafonePhotos";
