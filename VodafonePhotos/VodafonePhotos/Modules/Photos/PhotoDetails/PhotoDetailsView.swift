@@ -28,10 +28,8 @@ class PhotoDetailsView: BaseViewController {
     private func setupUI() {
         setupImageView()
         setupScrollView()
-        self.navigationItem.title = viewModel.getAuthorName()
-        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL(),
-                                    placeholderImage: nil)
+        setupAuthorName()
+        setupViewBackgroundColor()
     }
     
     private func setupImageView() {
@@ -40,12 +38,27 @@ class PhotoDetailsView: BaseViewController {
         photoImageView.contentMode = .scaleAspectFit
         photoImageView.sd_imageTransition = .fade
         photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL(),
+                                    placeholderImage: nil)
     }
     
     private func setupScrollView() {
         scrollView.maximumZoomScale = 4
         scrollView.minimumZoomScale = 1
         scrollView.delegate = self
+    }
+    
+    private func setupAuthorName() {
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = viewModel.getAuthorName()
+    }
+    
+    private func setupViewBackgroundColor() {
+        guard let image = photoImageView.image else { return }
+        if let dominantColor = image.averageColor {
+            self.view.backgroundColor = dominantColor
+        }
     }
 }
 

@@ -43,11 +43,14 @@ struct Colors {
 }
 
 struct Dimensions {
-    
     static let APP_CORNER_RADIUS    : CGFloat   = 4
     static let APP_BORDER_WIDTH     : CGFloat   = 0.3
 }
 
 struct Images {
     static let AD_PLACEHOLDER = UIImage(named: "adPlaceholder")
+}
+
+struct Strings {
+    static let Photos_LISTING = "Photos Listing"
 }

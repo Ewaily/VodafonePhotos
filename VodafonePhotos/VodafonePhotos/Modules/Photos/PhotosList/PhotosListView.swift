@@ -20,12 +20,21 @@ class PhotosListView: BaseViewController {
         fetchPhotos()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBarTitle()
+    }
+    
     private func setupViewModel() {
         viewModel = PhotosListViewModel()
     }
     
     private func setupUI() {
         setupPhotosTableView()
+    }
+    
+    private func setupNavigationBarTitle() {
+        self.navigationItem.title = Strings.Photos_LISTING
     }
     
     private func setupPhotosTableView() {

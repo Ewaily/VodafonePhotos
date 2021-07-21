@@ -29,5 +29,6 @@ class BaseViewController: UIViewController, Storyboarded {
                                                                for: UIBarPosition.any,
                                                                barMetrics: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
     }
 }
