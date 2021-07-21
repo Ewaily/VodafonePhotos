@@ -52,7 +52,10 @@ class PhotoCell: UITableViewCell {
     }
     
     func bindCell(info: PhotoCellInfo) {
-        photoImageView.sd_setImage(with: info.photoImageURL,
-                                    placeholderImage: nil)
+        photoImageView.sd_setImage(with: info.photoImageURL) { image, error, _, _ in
+            if image == nil {
+                self.photoImageView.image = Images.PHOTO_PLACEHOLDER
+            }
+        }
     }
 }

@@ -38,6 +38,12 @@ class PhotoDetailsView: BaseViewController {
         photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         photoImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         photoImageView.sd_setImage(with: viewModel.getPhotoDownloadURL()) { image, _, _, _ in
+            if image == nil {
+                self.photoImageView.image = Images.PHOTO_PLACEHOLDER
+                if let dominantColor = Images.PHOTO_PLACEHOLDER?.averageColor {
+                    self.view.backgroundColor = dominantColor
+                }
+            }
             if let image = image, let dominantColor = image.averageColor {
                 self.view.backgroundColor = dominantColor
             }
