@@ -28,6 +28,11 @@ the selected photo
 # Demo
 ![VodafonePhotos Online Mode](README_Resources/online_mode.gif) ![VodafonePhotos Offline Mode](README_Resources/offline_mode.gif) 
 
+# Run Requirements
+
+- Xcode 12.5.1 (12E507)
+- Swift 5
+
 # Installation
 Check out to development branch
 #### CocoaPods
@@ -37,7 +42,7 @@ or simply do this 👇
 $ sudo gem install cocoapods
 ```
 
-Install the dependencies and devDependencies and run via **`VodafonePhotos.xcworkspace`** -
+Install the dependencies and devDependencies and run via **`VodafonePhotos.xcworkspace`** 
 
 ```sh
 cd VodafonePhotos/VodafonePhotos 
