@@ -18,6 +18,7 @@ VodafonePhotos is an iOS mobile app that display list of photos queried from a p
 - Zoom In & Out the image in the details
 - Adjust the details screen background color according to the most dominant color of
 the selected photo
+- Support both orientations portrait and landscape
 - Pull to refresh in offline mode
 - Cache maximum of 20 items, so the app could work in offline mode
 - Unit tests for the ViewModels
@@ -36,9 +37,10 @@ or simply do this 👇
 $ sudo gem install cocoapods
 ```
 
-Install the dependencies and devDependencies and run.
+Install the dependencies and devDependencies and run via **`VodafonePhotos.xcworkspace`** -
 
 ```sh
 cd VodafonePhotos/VodafonePhotos 
 $ pod install
 ```
+
